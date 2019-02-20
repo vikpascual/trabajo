@@ -1,0 +1,89 @@
+<!-- Creado por Víctor Pascual Muñoz -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Espai Abastos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="plantilla.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="ubicacion.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:800|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link href="img/logoabastos.png" rel="icon" type="icon">
+    </head>
+    <body>
+        <header>
+            <div class="contenedor cabecera">
+                <a href="index.html" class="titulo">ABASTOS</a>
+                <span class="icono-menu"><img src="img/menu.svg"></span>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aulas.html">Aulas</a></li>
+                        <li><a href="talleres.html">Talleres</a></li>
+                        <li><a href="ubicacion.html" id="actual">Ubicación / Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="contenedor principal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10359.984383680248!2d-0.3947269687704698!3d39.46838472118025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f46da4855e1%3A0x9c6c795bc92d164e!2sInstituto+de+Educaci%C3%B3n+Secundaria+Abastos!5e0!3m2!1ses!2ses!4v1549587839176" width="100%" height="100%;" allowfullscreen></iframe>
+            </section>
+            <section class="contacto">
+                <article class="contacto">
+                    <img src="img/correo.png">
+                    <p><span>Via Email</span></p>
+                    <p>iesabastos@iesabastos.org</p>
+                </article>
+                <article class="contacto">
+                    <img src="img/telefono.png">
+                    <p><span>Teléfono y Whatsapp</span></p>
+                    <p>961205875 / 666666666</p>
+                </article>
+                <article class="contacto">
+                    <img src="img/mapa.png">
+                    <p><span>Visitanos en </span></p>
+                    <p>Carrer d'Alberic, 18, 46008 València</p>
+                </article>
+            </section>
+            <section class="contactar">
+                <p id="contactar"></p>
+                <h1>¿Quieres más Información o deseas reservar una clase?</h1>
+                <p>Rellena el formulario y nos pondremos en contacto contigo</p>
+                <hr>
+                <form action="contacto.php" name="contacto" method="POST">
+                    <input class="input1" name="nombre" type="text" placeholder="Nombre" minlength="3" maxlength="30" required>
+                    <input class="input1" name="telefono" type="tel" placeholder="Teléfono (opcional)" minlength="9" maxlength="9">
+                    <input class="input2" name="mail" type="email" placeholder="Email" required>
+                    <input class="input3" name="detalles" type="text" placeholder="Detalles del alquiler" minlength="20" maxlength="300" required>
+                    <button><input type="submit"></button>
+                </form>
+            </section>
+        </main>
+        <footer>
+                <h1>No te olvides de seguirnos y darnos un me gusta en nuestras redes sociales ;)</h1>
+                <div>
+                    <a href="https://www.facebook.com/pages/category/Junior-High-School/IES-abastos-111948078841463/" class="boton">
+                        <i class="fab fa-facebook "></i>
+                    </a>
+                    <a href="https://twitter.com/institutabastos?lang=es" class="boton">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" onClick="alert('Nuestro Teléfono es: +34 666 666 666')" class="boton">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </footer>
+            <!-- Los scripts de normal se ponen en el head, pero es mejor al final para que cargue primero el html -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.icono-menu').click(function(){
+                    $('ul').toggleClass('mostrar')
+                })
+            })
+        </script>
+    </body>
+</html>

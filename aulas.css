@@ -1,0 +1,126 @@
+/* Creado Por Víctor Pascual Muñoz */
+body {
+    background: #F6F6F7;
+}
+header {
+    z-index: 9999;
+}
+.aula a button {
+    background:#0c71c3;
+    border-radius: 5px;
+    padding: 8px 20px;
+    color:white;
+    font: normal 700 1.25vw/1 "lato", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+a button:hover {
+    background: #073763;
+    animation: zoom 0.3s linear forwards;
+}
+@keyframes zoom {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+section.principal{
+    padding: 10%;
+    margin-top: -10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+article.presentacion {
+    margin-top: 70px;
+    text-align: center;
+    width: 60%;
+    margin-left: 12.6%;
+}
+article.presentacion h1 {
+    font-size: 3vw;
+}
+article.presentacion p {
+    color: grey;
+    font-size: 1.25vw;
+    line-height: 30px;
+}
+article.aula {
+    background: white;
+    width: 25%;
+    margin-right: 2.5%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 39px 80px -6px;
+    padding-bottom: 1%;
+    margin-bottom: 3%;
+}
+article.aula a {
+    text-decoration: none;
+    color: blue;
+}
+div.img img{ 
+    position: relative;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+}
+div.img img.dinamica{
+    animation: opacidad 20s linear alternate-reverse;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    z-index: 1;
+}
+div.estatica {
+    background: url(img/Cafeteria.jpg);
+    background-size: 101%;
+}
+div.estatica2 {
+    background: url(img/futbol.jpg);
+    background-size: 101%;
+}
+@keyframes opacidad {
+    0% {opacity: 1;}
+    25% {opacity: 1;}
+    50% {opacity: 0;}
+    100%{opacity: 0;}
+}
+div.texto {
+    position: relative;
+    margin-top: -7%;
+    font-size: 1.25vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: 3;
+}
+span{
+    color: grey;
+}
+@media only screen and (max-width: 840px) {
+    section.principal {
+        display: block;
+    }
+    article.aula {
+        width: 50%;
+        margin-left: 25%;
+    }
+    div.texto {
+        font-size: 3vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        z-index: 3;
+    }
+    .aula a button {
+        font: normal 700 3vw/1 "lato", sans-serif;
+    }
+    article.presentacion{
+        width: 80%;
+        margin-left: 10%;
+    }
+    article.presentacion h1 {
+        font-size: 6vw;
+    }
+    article.presentacion p {
+        font-size: 3vw;
+        line-height: 20px;
+    }
+}

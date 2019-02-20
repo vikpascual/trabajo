@@ -1,0 +1,120 @@
+<!-- Creado por Víctor Pascual Muñoz -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Espai Abastos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="plantilla.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:800|Roboto" rel="stylesheet">
+        <link href="img/logoabastos.png" rel="icon" type="icon">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <body>
+        <div class="aviso">
+            <h1>No ha rellenado bien los datos</h1>
+            <button class="aviso">OK</button>
+        </div>
+        <header class="gris">
+            <div class="contenedor cabecera">
+                <a href="index.html" class="titulo">ABASTOS</a>
+                <span class="icono-menu"><img src="img/menu.svg"></span>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" id="actual">Inicio</a></li>
+                        <li><a href="aulas.html">Aulas</a></li>
+                        <li><a href="talleres.html">Talleres</a></li>
+                        <li><a href="ubicacion.html">Ubicación / Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="gris">
+            <section class="contenedor principal">
+                <article class="texto">
+                    <h1>CONTRATACIÓN DE AULAS EN VALENCIA</h1>
+                    <p>Contamos con clases equipadas con todo lo preciso para desempeñar un evento didáctico. Alquila un espacio en el Centro de Valencia. Alquilamos clases los 365 días del año.<br></p>
+                    <a href="aulas.html"><button>VER AULAS</button></a>
+                </article>
+                <article class="formulario">
+                    <h1>Presupuesto a medida</h1>
+                    <form action="calculadora.php" method="POST">
+                        <input type="text" name="nombre" placeholder="Nombre" minlength="3" maxlength="20" required>
+                        <input type="email" name="email" placeholder="Dirección de correo electrónico" required>
+                        <select name="tipo_aula" required>
+                            <option value="aula_normal">Aula Normal</option>
+                            <option value="aula_equipada">Aula Equipada</option>
+                            <option value="salon_de_actos">Salón De Actos</option>
+                            <option value="cafeteria">Cafetería</option>
+                            <option value="patio_interior">Patio Interior</option>
+                            <option value="cancha_baloncesto">Cancha Baloncesto / Campo Fútbol Sala</option>
+                        </select>
+                        <input type="number" name="numero_asistentes" placeholder="Nº Asistentes" max="110" required>
+                        <input type="number" name="numero_horas" placeholder="Nº Horas" required>
+                        <button><input type="submit" value="Enviar"></button>
+                    </form>
+                </article>
+            </section>
+            <section class="info">
+                <div class="info">
+                    <p><img src="img/amigos.svg"></p>
+                    <h4>PROFESIONALES EN FORMACIÓN</h4>
+                    <p>Estamos metidos en el sector de la enseñanza y somos conocedores de todas las necesidades a la hora de efectuar un evento formativo.  Ponemos a disposicion nuestro modelo y experiencia. </p>
+                </div>
+                <div class="info">
+                    <p><img src="img/ciudad.svg" id="ciudad"></p>
+                    <h4>MAS DE 30 AULAS EN UNA UBICACION PRIVILEGIADA</h4>
+                    <p>Tenemos en oferta 30 clases en alquiler de distintos tamaños en el epicentro de Valencia. Contamos también con un Salón de Actos,Clases Polivalentes y Clases dedicadas a la Informática . </p>
+
+                </div>
+                <div class="info">
+                        <p><img src="img/like.svg" id="ciudad"></p>
+                    <h4>FLEXIBILIDAD Y PRECIO</h4>
+                    <P>Ofrecemos unas tarifas adaptas al mercado y ajustadas para que tu formacion pueda salir hacia delante. Abrimos en Fin de Semana. Beneficiate de descuentos  por el alquiler en volumen de horas.</P>
+                </div>
+            </section>
+            <section class="contacto">
+                <article class="texto">
+                    <h1>RESERVA TU AULA POR TELÉFONO</h1>
+                    <p>Nuestro departamento te aconsejará y orientará para que puedas efectuar la reserva de tu clase en el mismo día. Visita nuestra infraestructura en el centro de Valencia Carrer d'Alberic 18 Valencia.</p>
+                    <a href="ubicacion.html"><button>CONTACTA</button></a>
+                </article>
+            </section>
+        </main>
+        <footer class="gris">
+            <h1>No te olvides de seguirnos y darnos un me gusta en nuestras redes sociales ;)</h1>
+            <div>
+                <a href="https://www.facebook.com/pages/category/Junior-High-School/IES-abastos-111948078841463/" class="boton">
+                    <i class="fab fa-facebook "></i>
+                </a>
+                <a href="https://twitter.com/institutabastos?lang=es" class="boton">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" onClick="alert('Nuestro Teléfono es: +34 666 666 666')" class="boton">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </footer>
+        <!-- Los scripts de normal se ponen en el head, pero es mejor al final para que cargue primero el html -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.icono-menu').click(function(){
+                    $('ul').toggleClass('mostrar')
+                })
+            })
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.aviso').click(function(){
+                    $('header').removeClass('gris');
+                    $('main').removeClass('gris');
+                    $('footer').removeClass('gris');
+                    $('.aviso').addClass('aviso2');
+                })
+            })
+        </script>
+    </body>
+</html>
